@@ -23,8 +23,9 @@
               <ul class="navigation__list">
                 <!-- <a href="#" class="link">Contact</a> -->
                 <li>
-                  <button class="icon-button">
-                    <a href="#contact"></a>
+                  <!-- <button class="icon-button" onclick="window.open('https://github.com/sebuzz');" value="" /> -->
+                  <button class="icon-button" onclick="location.href='#contact'" value="" title="Contact" />
+                    <!-- <a href="#contact"></a> -->
                     <svg
                       style="width: 1.2em; height: 1.2em"
                       viewBox="0 0 24 24"
@@ -38,7 +39,7 @@
                 </li>
                 <!-- <a href="#" class="link active">Biography</a> Test -->
                 <li>
-                  <button class="icon-button">
+                    <button class="icon-button" onclick="location.href='#biography'" value="" title="Biography" />
                     <svg
                       style="width: 1.2em; height: 1.2em"
                       viewBox="0 0 24 24"
@@ -52,7 +53,7 @@
                 </li>
                 <!-- <a href="#skills" class="link">Skills</a> -->
                 <li>
-                  <button class="icon-button">
+                    <button class="icon-button" onclick="location.href='#skills'" value="" title="skills" />
                     <svg
                       style="width: 1.2em; height: 1.2em"
                       viewBox="0 0 24 24"
@@ -76,32 +77,35 @@
         <div id="profile-pic-subtext">
           Some text that goes beneath the picture
         </div>
-        <div id="skills" class="skills1">
-          <ul class="skills-list">
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>macOS</li>
-            <li>HTML</li>
-            <li>Swift</li>
-            <li>SpriteKit</li>
-            <li>Git</li>
-            <li>Objective-C</li>
-          </ul>
-        </div>
-        <div id="skills-2">
-          <ul class="skills-list">
-            <li>Flash</li>
-            <li>Photoshop</li>
-            <li>PHP</li>
-            <li>MySQL</li>
-            <li>ActionScript</li>
-            <li>Xcode</li>
-            <li>Logic</li>
-            <li>Ableton Live</li>
-          </ul>
+        <div class="card">
+            <div id="skills" class="skills1">
+                <div class="card__headline">Skills</div>
+            <ul class="skills-list">
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>macOS</li>
+                <li>HTML</li>
+                <li>Swift</li>
+                <li>SpriteKit</li>
+                <li>Git</li>
+                <li>Objective-C</li>
+            </ul>
+            </div>
+            <div id="skills-2">
+            <ul class="skills-list">
+                <li>Flash</li>
+                <li>Photoshop</li>
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>ActionScript</li>
+                <li>Xcode</li>
+                <li>Logic</li>
+                <li>Ableton Live</li>
+            </ul>
+            </div>
         </div>
         <div class="card-container">
-          <div id="business-card" class="card">
+          <div id="gitHub" class="card">
             <div class="card__image"></div>
             <div class="card__headline">Github</div>
             <div class="card__subtext">See my cool Repos</div>
@@ -125,8 +129,8 @@
           </div>
         </div>
         <section></section>
-        <div id="my-cv" class="cv">
-          <h2>Resume</h2>
+        <div id="my-cv" class="card">
+          <div class="card__headline">Resume</div>
           <ul>
             <li>1995 Abitur</li>
             <li>1997 - 1999 SAE</li>
@@ -136,6 +140,28 @@
             <li>2017 - 2019 Logic</li>
           </ul>
         </div>
+        <div class="card-container">
+            <div id="contact" class="card">
+              <!-- <div class="card__image"></div> -->
+              <div class="card__headline">Contact</div>
+              <div class="card__subtext">Contact me</div>
+              <div>
+                <a class="card__link" href="mailto:skuenne@sebus.us"
+                  >skuenne@sebus.us</a
+                >
+              </div>
+              <div>
+                <button class="icon-button" onclick="location.href='mailto:skuenne@sebus.us'" value="" />
+                <!-- <button class="icon-button" href="mailto@skuenne@sebus.us"> -->
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M13 17H17V14L22 18.5L17 23V20H13V17M20 4H4A2 2 0 0 0 2 6V18A2 2 0 0 0 4 20H11.35A5.8 5.8 0 0 1 11 18A6 6 0 0 1 22 14.69V6A2 2 0 0 0 20 4M20 8L12 13L4 8V6L12 11L20 6Z" />
+                    </svg>
+                </button>
+              </div>
+              <br class="telefon">phone:</br>+49(0)179 1109674</div>
+              <div class="mail"></div>
+            </div>
+          </div>
       </main>
       <footer>
         <div>
