@@ -5,8 +5,28 @@
 
 :root {
   --background-color: hsl(280, 100.5%, 100%);
-  --highlight-color: rgb(161, 184, 248);
-  --darker-color: rgb(118, 135, 182);
+  --highlight-color: rgb(157, 177, 229);
+  --darker-color: rgb(110, 132, 163);
+  --linear-gradient-one: linear-gradient(
+    0deg,
+    rgba(46, 68, 96, 1) 0%,
+    rgba(23, 137, 213, 1) 5%,
+    rgba(47, 158, 208, 1) 10%,
+    rgba(199, 230, 242, 1) 15%,
+    rgba(255, 255, 255, 1) 23%,
+    rgba(97, 184, 255, 1) 41%,
+    rgba(0, 170, 255, 0.2007177871148459) 100%
+  );
+  --linear-gradient-two: linear-gradient(
+    0deg,
+    rgba(46, 68, 96, 1) 0%,
+    rgba(68, 141, 190, 1) 5%,
+    rgba(65, 165, 210, 1) 10%,
+    rgba(199, 230, 242, 1) 15%,
+    rgba(255, 255, 255, 1) 23%,
+    rgba(90, 150, 194, 1) 39%,
+    rgba(99, 181, 222, 0.2007177871148459) 100%
+  );
 }
 
 html {
@@ -21,13 +41,21 @@ body {
   margin-left: 0.5em;
   padding: 00.5em;
   fill: currentColor;
+  color: var(--darker-color);
 }
 
 h1 {
   margin: 0 0.5em 0 0;
   margin-top: 0.2em;
   font-size: 1.5em;
-  color: var(--darker-color);
+  /* color: var(--darker-color); */
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(46, 68, 96, 1) 0%,
+    rgba(0, 170, 255, 0.2007177871148459) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 ul {
@@ -99,11 +127,22 @@ ul {
   border: rgb(122, 149, 255) solid 0.05em;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   border-radius: 0.35em;
-  background-color: var(--highlight-color);
+  /* background-color: var(--highlight-color); */
+  background: rgb(46, 68, 96);
+  background: var(--linear-gradient-one);
+
+  background: rgb(46, 68, 96);
+  background: var(--linear-gradient-two);
   font-size: 0.9em;
+  color: rgb(19, 50, 116);
 }
 
 .card-container {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 80px auto 80px;  */
+  gap: 15px 10px;
 }
 
 .profile-image {
@@ -119,7 +158,8 @@ ul {
   padding-bottom: 16px;
 
   position: relative;
-  width: 90%vw;
+  width: auto;
+  /* width: 90%vw; */
   /* height: 283px; */
   left: 0px;
   top: 0px;
@@ -178,6 +218,7 @@ ul {
   text-transform: uppercase;
 
   color: #202020;
+  color: var(--darker-color);
 
   /* background-color: red; */
 
