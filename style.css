@@ -48,6 +48,7 @@ h1 {
   margin: 0 0.5em 0 0;
   margin-top: 0.2em;
   font-size: 1.5em;
+  white-space: nowrap;
   /* color: var(--darker-color); */
   background: -webkit-linear-gradient(
     90deg,
@@ -56,6 +57,16 @@ h1 {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media (max-width: 375px) {
+  h1 {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 414px) {
+  h1 {
+    font-size: 1em;
+  }
 }
 
 ul {
@@ -78,6 +89,7 @@ ul {
   background-color: white;
   background-image: url("pics/BG_tile.png");
   position: sticky;
+  z-index: 10;
   top: 0px;
   padding-top: 0;
   padding-bottom: 0;
@@ -121,7 +133,7 @@ ul {
   flex-direction: row;
   align-items: inherit; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   white-space: nowrap;
 }
 
@@ -143,7 +155,6 @@ ul {
 
 .card-container {
   display: grid;
-
   grid-template-columns: 1fr 1fr 1fr;
   gap: 15px 10px;
 }
@@ -163,7 +174,24 @@ ul {
 
 .profile-image {
   margin-top: 1rem;
-  border: white solid 0.15em;
+  /* border: white solid 0.15em; */
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 0.85em;
+}
+figure {
+  border: none;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 300px;
+  margin: 0;
+}
+figcaption {
+  background-color: var(--darker-color);
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   border-radius: 0.85em;
 }
@@ -203,7 +231,6 @@ ul {
   top: 0px;
 
   /* background: url(/pics/me.png); */
-  background: url(https://avatars.githubusercontent.com/u/17763473?v=4);
   background-size: 128px 128px;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
@@ -333,4 +360,40 @@ ul {
 .icon-button__icon {
   height: 1em;
   width: 1em;
+}
+
+.--animate-fadeIn {
+  animation: fadeIn 3s ease 1;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.--animate-grow {
+  animation-duration: 0.75s;
+  animation-name: grow;
+}
+
+@keyframes grow {
+  from {
+    width: 1%;
+    height: auto%;
+  }
+
+  to {
+    width: 100%;
+    height: auto%;
+  }
 }
