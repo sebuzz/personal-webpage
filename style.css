@@ -117,8 +117,12 @@ ul {
 }
 
 .skills-list {
-  display: flex;
-  align-items: inherit;
+  /* display: flex;
+  flex-direction: row;
+  align-items: inherit; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  white-space: nowrap;
 }
 
 .skills-list li {
@@ -141,8 +145,20 @@ ul {
   display: grid;
 
   grid-template-columns: 1fr 1fr 1fr;
-  /* grid-template-rows: 80px auto 80px;  */
   gap: 15px 10px;
+}
+@media (max-width: 900px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 10px;
+  }
+}
+@media (max-width: 700px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 .profile-image {
